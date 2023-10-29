@@ -1,0 +1,39 @@
+@import "../common/var.scss";
+
+// @include b(button) { // 相当于.d-button{}
+//   @include when(disable) { // 相当于.d-button{.is-disable{}}
+
+//   }
+// }
+
+// .d-button{}
+@mixin b($block) {
+    $B: $namespace+'-'+$block; // $B相当与d-button
+    .#{$B}{ // 相当于.d-button{ 样式内容  }
+        @content;
+    }
+}
+// .d-button.is-xxx
+@mixin when($state) {
+    @at-root { // d-button
+        &.#{$state-prefix + $state} {
+            @content;
+        }
+    }
+}
+// &--primary => .d-button--primary
+@mixin m($modifier) {
+    @at-root {
+        #{&+$modifier-separator+$modifier} {
+            @content;
+        }
+    }
+}
+// &__header  => .d-button__header
+@mixin e($element) {
+    @at-root {
+        #{&+$element-separator+$element} {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,203 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@font-face {
+  font-family: "d-ui-icons"; /* Project id 4306789 */
+  src: url('./fonts/iconfont.woff2') format('woff2'),
+       url('./fonts/iconfont.woff') format('woff'),
+       url('./fonts/iconfont.ttf') format('truetype');
+}
+// 问题 i class ="d-ui-icons d-icon-tabqiehuan"
+// 用了 d-icon  自动的添加前缀
+[class^='#{$namespace}-icon-'] {
+  font-family: "d-ui-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.d-icon-tabqiehuan:before {
+  content: "\e75d";
+}
+
+.d-icon-chakan:before {
+  content: "\e75f";
+}
+
+.d-icon-gengduo:before {
+  content: "\e760";
+}
+
+.d-icon-menhu:before {
+  content: "\e761";
+}
+
+.d-icon-shaixuan:before {
+  content: "\e762";
+}
+
+.d-icon-lianjie:before {
+  content: "\e763";
+}
+
+.d-icon-rili:before {
+  content: "\e764";
+}
+
+.d-icon-fuzhi:before {
+  content: "\e765";
+}
+
+.d-icon-quanping:before {
+  content: "\e766";
+}
+
+.d-icon-tianjia:before {
+  content: "\e767";
+}
+
+.d-icon-shouji:before {
+  content: "\e768";
+}
+
+.d-icon-wochangkande:before {
+  content: "\e769";
+}
+
+.d-icon-tupian:before {
+  content: "\e76a";
+}
+
+.d-icon-sousuo:before {
+  content: "\e76b";
+}
+
+.d-icon-kapiankanban-xian:before {
+  content: "\e76c";
+}
+
+.d-icon-shoucang:before {
+  content: "\e76d";
+}
+
+.d-icon-xiaxian:before {
+  content: "\e76e";
+}
+
+.d-icon-zhibiaojiankong:before {
+  content: "\e76f";
+}
+
+.d-icon-suoding:before {
+  content: "\e770";
+}
+
+.d-icon-rukushenpi-jinzhi:before {
+  content: "\e781";
+}
+
+.d-icon-bangzhu:before {
+  content: "\e635";
+}
+
+.d-icon-bofang:before {
+  content: "\e636";
+}
+
+.d-icon-fenxiang:before {
+  content: "\e637";
+}
+
+.d-icon-anquan:before {
+  content: "\e638";
+}
+
+.d-icon-huiyuan:before {
+  content: "\e639";
+}
+
+.d-icon-faxian:before {
+  content: "\e63a";
+}
+
+.d-icon-jiesuo:before {
+  content: "\e63b";
+}
+
+.d-icon-jiami:before {
+  content: "\e63c";
+}
+
+.d-icon-hongbao:before {
+  content: "\e63d";
+}
+
+.d-icon-gaishuai:before {
+  content: "\e63e";
+}
+
+.d-icon-qiandao:before {
+  content: "\e63f";
+}
+
+.d-icon-paizhao:before {
+  content: "\e640";
+}
+
+.d-icon-jiayinliang:before {
+  content: "\e641";
+}
+
+.d-icon-jingyin:before {
+  content: "\e642";
+}
+
+.d-icon-shanchu:before {
+  content: "\e643";
+}
+
+.d-icon-liwu:before {
+  content: "\e644";
+}
+
+.d-icon-huodong:before {
+  content: "\e645";
+}
+
+.d-icon-kefu:before {
+  content: "\e646";
+}
+
+.d-icon-guanbi:before {
+  content: "\e647";
+}
+
+.d-icon-jianyinliang:before {
+  content: "\e648";
+}
+
+.d-icon-kabao:before {
+  content: "\e649";
+}
+
+.d-icon-shezhi:before {
+  content: "\e64a";
+}
+
+.d-icon-saomiao:before {
+  content: "\e64b";
+}
+
+.d-icon-luxiang:before {
+  content: "\e64c";
+}
+
+.d-icon-shangpin:before {
+  content: "\e64d";
+}
+
+.d-icon-shangchuan:before {
+  content: "\e64e";
+}
+
