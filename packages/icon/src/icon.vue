@@ -1,10 +1,10 @@
 <template>
-  <button> 按钮 </button>
+  <div> icon </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "DButton",
-});
+  name:'DIcon'
+})
 </script>
