@@ -4,8 +4,15 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "typescript": "^5.2.2"
+  },
   "devDependencies": {
     "lerna": "^7.4.1"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dengerpu/DElement-Ui.git",
+  "author": "dep <1649743146@qq.com>",
+  "license": "MIT"
 }
