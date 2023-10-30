@@ -37,3 +37,11 @@
         }
     }
 }
+
+//处理button-type
+@mixin button-type($color,$border-color,$backgound){
+    border: 1px solid;
+    color:$color;
+    border-color:$border-color;
+    background:$backgound
+}
