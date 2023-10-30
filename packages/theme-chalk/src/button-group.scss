@@ -1,0 +1,24 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@include b(button-group) {
+  
+  &>.#{$namespace}-button {
+    
+      &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+      }
+      &:nth-child(n+2) {
+        margin-left: 1px;
+      }
+      // 除了第一个和最后一个，其他元素的角度为0
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+      &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+      }
+  }
+}
