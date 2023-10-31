@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
-const menu = reactive(["button","button-group"])
+const menu = reactive(["button","button-group", "row-col"])
 </script>
 <style lang="scss" scope>
 .app_container {
@@ -55,6 +55,7 @@ const menu = reactive(["button","button-group"])
       }
     }
     .app_content {
+      width: 100%;
       padding: 20px;
     }
   }

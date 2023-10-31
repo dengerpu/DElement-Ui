@@ -10,6 +10,11 @@ const routes = [
     path: '/button-group',
     name: 'button-group',
     component: () => import("../views/button-group.vue")
+  },
+  {
+    path: '/row-col',
+    name: 'row-col',
+    component: () => import("../views/row-col.vue")
   }
 ]
 

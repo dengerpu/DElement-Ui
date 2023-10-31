@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+@import "./common/var.scss"; // 变量
+@import "./mixins/mixin.scss"; // 方法
+
+@include b(col) {
+  &[class*='#{$namespace}-col-'] {
+    box-sizing: border-box;
+  }
+  @for $i from 0 through 24 {
+    &.d-col-span-#{$i} { // d-col-span-5
+      max-width: (math.div(1, 24) * $i *100) * 1%;
+      flex: (math.div(1, 24) * $i *100) * 1%;
+    }
+    &.d-col-offset-#{$i} { // d-col-offset-10
+      margin-left: (math.div(1, 24) * $i *100) * 1%;
+    }
+  }
+}
