@@ -15,6 +15,11 @@ const routes = [
     path: '/row-col',
     name: 'row-col',
     component: () => import("../views/row-col.vue")
+  },
+  {
+    path: '/checkbox',
+    name: 'checkbox',
+    component: () => import("../views/checkbox.vue")
   }
 ]
 

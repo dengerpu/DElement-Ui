@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
-const menu = reactive(["button","button-group", "row-col"])
+const menu = reactive(["button","button-group", "row-col", "checkbox"])
 </script>
 <style lang="scss" scope>
 .app_container {
