@@ -2,10 +2,13 @@
   <div class="d-checkbox">
     <span class="d-checkbox__input">
       <input type="checkbox" 
-      v-model="model" 
+      v-model="model"  
       :disabled="disabled"
       :indeterminate="indeterminate"
       :name="name"
+      :checked="isChecked"
+      @change="handChange"
+      :value="label"
       >
     </span>
     <span class="d-checkbox__label">
@@ -26,7 +29,7 @@ export default defineComponent({
     label: [String, Number, Boolean],
     modelValue: [String, Number, Boolean] //双向数据绑定
   },
-  emits:["update:modelValue"],
+  emits:["update:modelValue", "change"],
   setup(props) {
     return {
       ...useCheckBoxProps(props)
