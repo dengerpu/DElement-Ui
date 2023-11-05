@@ -6,3 +6,9 @@ export interface ICheckBoxProps {
   disabled?: boolean // 禁用
   checked?: boolean // 是否选中
 }
+
+import { ComputedRef } from "vue"
+export interface IGroupProvide {
+  modelValue?:ComputedRef,
+  handChange?:(val: unknown) => void
+}

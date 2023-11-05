@@ -4,6 +4,7 @@ import Icon from "@d-ui/icon";
 import Row from "@d-ui/row";
 import Col from "@d-ui/col";
 import Checkbox from "@d-ui/checkbox";
+import checkBoxGroup from "@d-ui/checkbox-group";
 
 
 import { App } from "vue";
@@ -13,7 +14,8 @@ const components = [ // 引入所有组件
     ButtonGroup,
     Row,
     Col,
-    Checkbox
+    Checkbox,
+    checkBoxGroup
 ];
 const install = (app: App): void => {
     components.forEach(component => {

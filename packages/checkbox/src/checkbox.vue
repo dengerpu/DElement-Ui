@@ -11,8 +11,11 @@
       :value="label"
       >
     </span>
+
+    
     <span class="d-checkbox__label">
-      <slot></slot>
+      <span v-if="label">{{ label }}</span>
+      <slot v-if="$slots.default"></slot>
     </span>
   </div>
 </template>

@@ -19,8 +19,7 @@ function useModel(props: ICheckBoxProps) {
     set(val) { // 值改变通过自定义事件通知父组件
       if(useProvide.modelValue) {
         return useProvide.handChange(val);
-      }
-
+      } 
       emit("update:modelValue", val)
     }
   })
@@ -30,7 +29,11 @@ function useModel(props: ICheckBoxProps) {
 function usecheckbox(props: ICheckBoxProps, model) {
   const isChecked = computed(() => {
     const value = model.value
-    return value
+    if(Array.isArray(value)) {
+      return value.includes(props.label)
+    } else { // checkbox单个使用
+      return value
+    }
   })
   return isChecked;
 }
@@ -39,7 +42,8 @@ function useEvent() {
   let { emit } = getCurrentInstance();
   function handChange(e) {
     const target = e.target
-    const value = target.isChecked ? true : false
+    const value = target.checked ? true : false
+    e.stopPropagation();
     emit("change", value)
   }
   return handChange
