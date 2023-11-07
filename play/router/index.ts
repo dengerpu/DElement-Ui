@@ -1,4 +1,5 @@
 import {createRouter, createWebHashHistory} from "vue-router"
+import { computed } from 'vue';
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/checkbox-group',
     name: 'checkbox-group',
     component: () => import("../views/checkbox-group.vue")
+  },
+  {
+    path: '/transfer',
+    name: 'transfer',
+    component: () => import("../views/transfer.vue")
   }
 ]
 

@@ -14,7 +14,10 @@ export default defineComponent({
   }, 
   emits: ["update:modelValue","change"],
   setup(props, { emit }) {
-    let modelValue = computed(() => props.modelValue);
+    // let modelValue = computed(() => props.modelValue);
+    let modelValue = computed(() => {
+      return props.modelValue
+    });
     const handChange = (val) => {
       emit("update:modelValue", val);
       emit("change", val);

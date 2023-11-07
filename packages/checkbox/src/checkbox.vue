@@ -13,9 +13,9 @@
     </span>
 
     
-    <span class="d-checkbox__label">
-      <span v-if="label">{{ label }}</span>
-      <slot v-if="$slots.default"></slot>
+    <span v-if="$slots.default || label" class="el-checkbox__label">
+      <slot></slot>
+      <template v-if="!$slots.default">{{ label }}</template>
     </span>
   </div>
 </template>

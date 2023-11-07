@@ -1,0 +1,28 @@
+@import "./common/var.scss"; // 变量
+@import "./mixins/mixin.scss"; // 方法
+
+@include b(transfer) {
+  display: flex;
+  vertical-align: middle;
+}
+
+@include b(transfer-panel) {
+  width:200px;
+  margin:0 20px;
+  height:300px;
+  border:1px solid rgb(109, 104, 104);
+  overflow: hidden;
+  @include e(header) {
+    display: flex;
+    align-items: center;
+    height: $--transfer-panel-header-height;
+    background-color: $--fill-color-light;
+  }
+  @include e(body) {
+    width:100%;
+    height: $--transfer-panel-body-height;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: scroll;
+  } 
+}

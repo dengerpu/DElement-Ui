@@ -30,7 +30,7 @@ export default defineComponent({
     const cities = ['北京', '上海', '广州', '深圳']
 
     const handleCheckAllChange = (val: boolean) => {
-      console.log(val)
+      // console.log(val)
       checkedCities.value = val ? cities : []
       checkAll.value = val
       isIndeterminate.value = false

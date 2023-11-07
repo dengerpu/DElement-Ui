@@ -5,6 +5,7 @@ import Row from "@d-ui/row";
 import Col from "@d-ui/col";
 import Checkbox from "@d-ui/checkbox";
 import checkBoxGroup from "@d-ui/checkbox-group";
+import Transfer from "@d-ui/transfer";
 
 
 import { App } from "vue";
@@ -15,7 +16,8 @@ const components = [ // 引入所有组件
     Row,
     Col,
     Checkbox,
-    checkBoxGroup
+    checkBoxGroup,
+    Transfer
 ];
 const install = (app: App): void => {
     components.forEach(component => {
