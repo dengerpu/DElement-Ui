@@ -23,8 +23,16 @@ export const useCheck = (props, State) => {
     // 获取所有的key
     let checkeys = checkDisAble.value.map(item => item[keyProps.value]);
     State.allCheck = checkeys.length > 0 && checkeys.every(key => State.checked.includes(key));
+    // 通知父组件，选中发生改变，为穿梭功能提供数据
     emit("checkChange", State.checked);
+    // 实现穿梭，原理就是兄弟间组件传值 （这里采用借助父组件的形式）
   })
+  
+  // 解决穿梭之后全选还在的问题
+  watch(() => props.data, () => {
+    State.allCheck = false;
+  })
+
 
   return{
     labelProps,

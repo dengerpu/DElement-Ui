@@ -11,7 +11,6 @@ export const useComponentData = (props) => {
       memo[cur[propkey.value]] = cur;
     }, {})
   })
-  console.log(data)
   // 3.将数据分 左右
   const sourceData = computed(() => {
     return props.data.filter(item => !props.modelValue.includes(item[propkey.value]))
@@ -30,5 +29,4 @@ export const useComponentData = (props) => {
     sourceData,
     targetData
   }
-
 }
