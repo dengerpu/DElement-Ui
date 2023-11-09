@@ -32,6 +32,7 @@ export default defineComponent({
       type:Object
     }
   },
+  emits:["checkChange"],
   setup(props) {
     //注意 （1）处理数据
     const State = reactive({

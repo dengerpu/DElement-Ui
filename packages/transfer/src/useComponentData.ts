@@ -7,7 +7,7 @@ export const useComponentData = (props) => {
   // 2.把数组变成对象 []=>{}  {}=[]
   const data = computed(() => { // [{key:1},{key:2}]
     return props.data.reduce((memo, cur) => {
-      console.log("memo", memo)
+      // console.log("memo", memo)
       memo[cur[propkey.value]] = cur;
     }, {})
   })
