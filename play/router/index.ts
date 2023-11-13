@@ -31,6 +31,11 @@ const routes = [
     path: '/transfer',
     name: 'transfer',
     component: () => import("../views/transfer.vue")
+  },
+  {
+    path: '/message',
+    name: 'message',
+    component: () => import("../views/message.vue")
   }
 ]
 
