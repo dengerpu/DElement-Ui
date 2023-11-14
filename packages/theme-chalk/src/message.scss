@@ -1,0 +1,39 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@include b(message) {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  min-width:300px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 40px;
+  line-height: 40px;
+  display:flex;
+  transition: all 0.4s,to; //动画效果
+  @include m(success){
+      background:$--color-success;
+  }
+  @include m(info){
+   background:$--color-info;
+  }
+  @include m(warning){
+    background:$--color-warning;
+  }
+  @include m(danger){
+    background:$--color-danger;
+  }
+  @include when(center){
+    justify-content: center;
+    color:pink,
+  }
+}
+
+//添加动画
+//问题：我们是不是可以根据不同的条件显示的button组件的文字，boder background 不同
+   //重新 一个方法根据不同参数去设置
+.d-message-fade-enter-from,.d-message-fade-leave-to{
+  transform:translate(-50%,-100%) //左右 ,上下
+}
