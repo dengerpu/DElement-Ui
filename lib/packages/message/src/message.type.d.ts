@@ -8,5 +8,5 @@ export interface ImessageProps {
     onclose?: () => void;
     offset?: number;
 }
-export type ImessageOptions = ImessageProps | string;
+export type ImessageOptions = ImessageProps;
 export {};

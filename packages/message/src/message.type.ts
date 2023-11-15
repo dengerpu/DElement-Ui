@@ -9,4 +9,4 @@ export interface ImessageProps{
     offset?:number
 }
 
-export type ImessageOptions =  ImessageProps | string
+export type ImessageOptions =  ImessageProps

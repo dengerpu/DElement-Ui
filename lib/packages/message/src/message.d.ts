@@ -1,1 +1,2 @@
-export default function Message(options: any): void;
+import { ImessageOptions } from "./message.type";
+export default function Message(options: ImessageOptions): void;

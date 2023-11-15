@@ -1,4 +1,4 @@
-import { ImessageOptions } from "./message.type"
+import { ImessageOptions, ImessageProps } from "./message.type"
 import MessageComponent from "./messageComponent.vue"
 import { createVNode, render } from "vue";
 
@@ -18,7 +18,7 @@ export default function Message(options: ImessageOptions) {
   })
 
   // 处理 清除元素
-  let userClose = options.close;
+  let userClose = options.onclose;
   const container = document.createElement("div");
 
   let ops = {
