@@ -4,7 +4,6 @@ import { createVNode, render } from "vue";
 
 let instance : any[] = [] // 保存实例
 export default function Message(options: ImessageOptions) {
-  console.log("message");
   if(typeof options === "string") {
     options: {
       message: options
