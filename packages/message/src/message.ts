@@ -14,11 +14,13 @@ export default function Message(options: ImessageOptions) {
   // 添加一个offset
   let offset = options.offset || 20;
   instance.forEach(item => {
+    console.log("组件实例", item)
     offset += 60
   })
 
   // 处理 清除元素
   let userClose = options.close;
+  const container = document.createElement("div");
 
   let ops = {
     ...options,
@@ -27,10 +29,11 @@ export default function Message(options: ImessageOptions) {
     onclose: () => {
       console.log("关闭事件前执行的操作")
       userClose?.()
-    }
+    },
+    onDestroy: () => {
+      render(null, container)
+    },
   }
-
-  console.log("ops", ops)
     
 
   //将template 放到body 
@@ -44,17 +47,18 @@ export default function Message(options: ImessageOptions) {
   // console.log(MessageComponent);
   // console.log(createVNode(MessageComponent));
   let vm = createVNode(MessageComponent, ops);
-  const container = document.createElement("div");
+
   // 接收父组件的数据
-  vm.props!.onDestory = () => {
-    console.log("组件销毁");
-    render(null, container);
-    console.log(container);
-  }
+  // vm.props!.onDestory = () => {
+  //   console.log("组件销毁");
+  //   render(null, container);
+  //   console.log(container);
+  // }
   // render(组件，位置)
   render(vm, container);
 
-  console.log("vm", vm)
+  console.log("当前组件", container)
+
   // 放到指定的位置 body 下的儿子
   document.body.appendChild(container.firstElementChild!)
   instance.push(vm);

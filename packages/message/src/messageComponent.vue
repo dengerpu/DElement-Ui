@@ -50,7 +50,7 @@ export default defineComponent({
     onUnmounted(() => {
       clearTimeout(timer);
     })
-    // 计算偏移量
+    // 计算偏移量, style: {top: 20px}
     // 包裹一层小括号是确保 JavaScript 解析器将花括号 {} 视为对象字面量，而不是代码块
     let styles:any = computed(() => ({
       top:`${props.offset}px`
