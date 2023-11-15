@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "play-dev": "webpack serve --config ./play/webpack.config.js"
+    "play-dev": "webpack serve --config ./play/webpack.config.js",
+    "build": "webpack --config ./build/webpack.config.js"
   },
   "dependencies": {
     "typescript": "^5.2.2",
