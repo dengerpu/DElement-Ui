@@ -5,8 +5,10 @@ import { createVNode, render } from "vue";
 let instance : any[] = [] // 保存实例
 export default function Message(options: ImessageOptions) {
   if(typeof options === "string") {
-    options: {
-      message: options
+    options =  {
+      message: options,
+      type: "info",
+      center: true
     }
   }
 
@@ -46,6 +48,8 @@ export default function Message(options: ImessageOptions) {
   // console.log(MessageComponent);
   // console.log(createVNode(MessageComponent));
   let vm = createVNode(MessageComponent, ops);
+
+  console.log(vm);
 
   // 接收父组件的数据
   // vm.props!.onDestory = () => {

@@ -5,11 +5,12 @@
 -->
 <transition name="d-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
   <div class="d-message" :class="classs" :style="styles" v-show="show">
-    message
+    <d-icon name="shaixuan"></d-icon>{{message}}
   </div>
 </transition>
 </template>
 <script lang="ts">
+import DIcon from "@d-ui/icon";
 import { computed, defineComponent, onMounted, onUnmounted, ref } from "vue"
 
 export default defineComponent({
@@ -27,6 +28,9 @@ export default defineComponent({
       type: Function,
       required: false,
     }
+  },
+  components: {
+    DIcon
   },
   setup(props) {
     let show = ref(false);
