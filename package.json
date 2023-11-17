@@ -1,6 +1,5 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "d-element-plus",
   "workspaces": [
     "packages/*"
   ],
@@ -41,8 +40,9 @@
     "webpack-dev-server": "^4.15.1"
   },
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "description": "后台管理系统组件库",
   "repository": "https://github.com/dengerpu/DElement-Ui.git",
-  "author": "dep <1649743146@qq.com>",
+  "author": "dengerpu",
   "license": "MIT"
 }

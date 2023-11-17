@@ -1,8 +1,8 @@
 import { ImessageOptions, ImessageProps } from "./message.type"
 import MessageComponent from "./messageComponent.vue"
-import { createVNode, render } from "vue";
+import { createVNode, render, getCurrentInstance } from "vue";
 
-let instance : any[] = [] // 保存实例
+let instances : any[] = [] // 保存实例
 export default function Message(options: ImessageOptions) {
   if(typeof options === "string") {
     options =  {
@@ -14,8 +14,8 @@ export default function Message(options: ImessageOptions) {
 
   // 添加一个offset
   let offset = options.offset || 20;
-  instance.forEach(item => {
-    console.log("组件实例", item)
+  instances.forEach(item => {
+    // console.log("组件实例", item)
     offset += 60
   })
 
@@ -28,7 +28,7 @@ export default function Message(options: ImessageOptions) {
     offset,
     // 添加事件
     onclose: () => {
-      console.log("关闭事件前执行的操作")
+      // console.log("关闭事件前执行的操作")
       userClose?.()
     },
     onDestroy: () => {
@@ -49,8 +49,6 @@ export default function Message(options: ImessageOptions) {
   // console.log(createVNode(MessageComponent));
   let vm = createVNode(MessageComponent, ops);
 
-  console.log(vm);
-
   // 接收父组件的数据
   // vm.props!.onDestory = () => {
   //   console.log("组件销毁");
@@ -64,5 +62,5 @@ export default function Message(options: ImessageOptions) {
 
   // 放到指定的位置 body 下的儿子
   document.body.appendChild(container.firstElementChild!)
-  instance.push(vm);
+  instances.push(vm);
 }
